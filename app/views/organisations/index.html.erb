@@ -1,0 +1,107 @@
+<h1>Listing organisations</h1>
+
+  <p>
+    <a href="http://www.surreyflora.org.uk" target="outside_link">Surrey Botanical Society</a><br>
+
+    <summary>
+     Originally known as Surrey Flora Committee, our Surrey Botanical Society has been well-established for many years, to represent and unite all those who want to enjoy, study, and record Surrey's astonishingly interesting, beautiful, and diverse flora.
+    </summary>
+  </p>
+
+  <p>
+    <a href="http://www.surreycc.gov.uk/sccwebsite/sccwspages.nsf/LookupWebPagesByTITLE_RTF/Lower+Mole+project?open%20document" target="outside_link">Lower Mole Countryside Project</a><br>
+
+     <summary>
+      The Lower Mole Project is a partnership with boroughs, districts and other organisations.
+      The Lower Mole Countryside Management Project has been in existence since 1983 and was the first Project to be established in the north Surrey area. It has built up a large and enthusiastic volunteer group which carries out a wide range of tasks to implement improvements to the local countryside, 4 days a week, including weekends, throughout the year.
+    </summary>
+  </p>
+
+  <p>
+    <a href="http://www.nationaltrust.org.uk/main/w-global/w-localtoyou/w-south_east/w-south_east-contact_us.htm" target="outside_link">National Trust</a><br>
+     <summary>
+     We protect historic houses, gardens, mills, coastline, forests, woods, fens, beaches, farmland, moorland, islands, archaeological remains, nature reserves, villages and pubs. Then we open them up for ever, for everyone.
+     </summary>
+     <details>
+    Many people don't know that we were founded over 100 years ago, by three passionate Victorians who wanted to preserve outdoor spaces and prevent them from being built on. Find out more about where we've come from and the extraordinary, Octavia Hill, the visionary behind our organisation.
+    </details>
+    </p>
+
+  <p>
+    <a href="http://www.surreywildlifetrust.co.uk/" target="outside_link">Surrey Wildlife Trust</a><br>
+  <summary>
+    Surrey Wildlife Trust (SWT) is a registered charity and the only organisation concerned solely with the conservation of all forms of wildlife in Surrey. 
+  </summary>
+   <details>
+  We care for more than 9,000 hectares of the county’s countryside for the benefit of people and wildlife. We are the largest Wildlife Trust in terms of land managed - being responsible for 4.5% of the county. SWT is part of a nationwide network of 47 local Trusts working to protect wildlife in towns and the countryside. Collectively, the Wildlife Trusts have 800,000 members and thousands of nature reserves.
+   </details>
+  </p>
+
+ <p>
+    <a href="http://surrey-arg.org.uk/" target="outside_link">Surrey Amphibian and Reptile Group</a><br>
+  <summary>
+  The Surrey amphibian and reptile group is a non-profit-making wildlife conservation organisation, based in the United Kingdom's county of Surrey. 
+  </summary>
+  <details>
+  SARG focuses on the care and preservation of wild, native reptiles and amphibians.
+  SARG was established in 1987 by people with an interest in Surrey's reptiles and amphibians. Surrey is very fortunate in being home to all of the UK's native species of reptiles and amphibians, including the very rare Smooth Snake and Great Crested Newt, and we want to see these creatures thrive in the County.
+  We are a mixture of hobbyists, scientists, and conservationists; amateurs and professionals, committed to sharing knowledge and understanding of these much-misunderstood and endangered animals.
+  We are affiliated to Surrey Wildlife Trust, and form part of the national ARG-UK network. We work voluntarily to prevent habitat destruction and resist damaging planning applications. We give advice to residents and organisations, work with schools and educational bodies, and help with numerous "toad-crossing" sites throughout Surrey.
+</details> 
+  </p>
+
+   <p>
+    <a href="http://www.butterfly-conservation.org/" target="outside_link">Butterfly Conservation</a><br>
+  <summary>
+  Butterfly Conservation has raised awareness of the drastic decline in butterflies and moths, and created widespread acceptance that action needs to be taken.
+  We recently published a butterfly report showing that three-quarters of butterflies in the UK have declined and over 45% are threatened.
+  </summary>
+  </p>
+  
+   <p>
+    <a href="http://www.molevalley.gov.uk/" target="outside_link">Mole Valley District Council</a><br>
+  <summary>
+    Mole Valley lies at the heart of Surrey, mid-way between London and the Sussex coast. It has a population of approximately 83,800 people. The majority of the district's population (72%) live in the main towns and villages of the district, in particular, Dorking and Leatherhead.
+  </summary>
+  </p>
+  
+  <p>
+    <a href="http://www.rspb.org.uk/groups/dorkinganddistrict" target="outside_link">RSPB Dorking and District Local Group</a><br>Leatherhead and District Countryside Protection Society<br>
+     <summary>
+      The Group covers a large area of mid-Surrey but centered on Dorking, Leatherhead and The Bookhams. During the winter indoor meetings are held once a month. Bird-watching walks and related activities are organised at the weekends and mid-week: a coach is usually arranged for the more remote destinations. Most of the walks are fairly easy. New members are always welcome and a special effort is made for those who are beginners.
+    </summary>
+    </p>
+   
+   <p>
+    <a href="http://www.britmycolsoc.org.uk/" target="outside_link">British Mycological Society</a><br>
+  <summary>
+    The British Mycological Society is a registered British Charity open to all who are interested in promoting and learning about the exciting world of fungi. 
+  </summary>
+  <details>
+    It has member sections devoted to particular aspects of the fungal world including cutting edge research into many aspects of fungal science, the conservation and recording of fungi and the provision of educational resources for use at all ages and experience. If you are working with, fascinated by or wish to learn about fungi the Society can help.
+  </details> 
+  </p>
+
+  
+<h1>More organisations</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @organisations.each do |organisation| %>
+  <tr>
+    <td><%= organisation.name %></td>
+    <td><%= link_to 'Show', organisation %></td>
+    <td><%= link_to 'Edit', edit_organisation_path(organisation) %></td>
+    <td><%= link_to 'Destroy', organisation, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Organisation', new_organisation_path %>

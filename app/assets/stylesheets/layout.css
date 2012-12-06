@@ -1,0 +1,70 @@
+/* layout.css
+*
+*basic styling for the static pages
+*
+*/
+
+
+div#container{
+	display:block;
+	position: relative;
+	min-height: auto;
+	width:1000px;
+	margin: 0 auto;
+	margin-top: 0;
+	background-color: #C8C8C8;
+}
+
+/*div#container2{
+	text-align: center;
+	display:block;
+	position: relative;
+	height:20px;
+	width: 1000px;
+	margin: 0 auto;
+	padding: 0;
+	background-color: #C8C8C8;
+}*/
+
+nav{
+	padding: 10px 0px;
+	background-color: #888888;
+	margin: 0;
+}
+section {
+	padding: 0px 30px;
+}
+
+section.sidebar {
+	text-align: right;
+	margin-bottom: 10px;
+	position: absolute right top;
+}
+
+header#page_header {
+	position: relative;
+	height:100px;
+	width: 100%;
+	background-color: #888888;
+	/*background: url('banner.png') top center no-repeat;*/
+	text-align: right;
+	color: #585858;
+	padding: 0px 0px;
+	margin: 0; 
+}
+
+footer#page_footer {
+	text-align: center;
+	position: relative;
+	height:20px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	background-color: #C8C8C8;
+}
+
+nav#utility{
+	float: right;
+	font-size: 1em;
+
+}
